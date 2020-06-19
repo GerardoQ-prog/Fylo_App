@@ -1,0 +1,297 @@
+/* @font-face {
+    font-family: Open_Sans;
+    src: url('../fuentes/Open_Sans/OpenSans-Regular.ttf'), 
+         url('../fuentes/Open_Sans/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: Raleway;
+    src: url('../fuentes/Raleway/Raleway-Regular.ttf'), 
+         url('../fuentes/Raleway/Raleway-Bold.ttf');
+} */
+
+body {
+    background: hsl(217, 28%, 15%);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    /*background: hsl(176, 68%, 64%); */
+}
+
+
+/******* Menu *********/
+
+nav {
+    padding: 3% 5% 5%;
+}
+
+.nav-left {
+    float: left;
+    cursor: pointer;
+}
+
+.nav-right {
+    float: right;
+}
+
+.img-logo-tm {
+    height: 40px;
+    padding-left: 44px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin-top: -15px;
+}
+
+.menu a {
+    padding: 8px 28px;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+    margin: 16px 1rem;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+
+.menu a:hover:before {
+    /*border-bottom: 3px solid #339ECC;*/
+    /*border-radius: 1px;
+transition: 0.2s all;*/
+    transform: scaleX(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu a:before {
+    position: relative;
+    content: '';
+    width: 70%;
+    max-width: 70%;
+    display: table;
+    height: 3px;
+    border-radius: 2px;
+    bottom: -28px;
+    transition: all 300ms linear;
+    transform: scaleX(0);
+    background: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.texto {
+    width: 70%;
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    margin: 0;
+    font-weight: 900;
+}
+
+.curvita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto1 {
+    width: 45%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.button-texto {
+    padding: 1.5% 8%;
+    width: 30%;
+    font-size: 18px;
+    background-color: #339ECC;
+    border-radius: 33px;
+    color: #FFF;
+    border-color: #339ECC;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.button-texto:hover {
+    background-color: #19698c;
+    transition: 0.5s all;
+    border-color: #19698c;
+}
+
+.cards {
+    position: relative;
+    top: -80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.card>h2 {
+    font-size: 20px;
+}
+
+.card>p {
+    font-size: 15px;
+}
+
+.card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 40px;
+}
+
+.img1 {
+    width: 30%;
+    height: 35%;
+}
+
+.curva {
+    background-image: url(./images/bg-curvy-desktop.svg);
+    width: 100%;
+    height: 1100px;
+    background-repeat: no-repeat;
+}
+
+.container-2 {
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    background: #181F2B;
+}
+
+.product {
+    background-color: #181F2B;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+}
+
+.product__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff
+}
+
+.product__img-container{
+    flex: 0 0 50%;/*es un shorthand, agrupa 3 propiedades
+        flex-grow: ; esto nos indica el factor de crecimiento de los flex-item,
+        si pongo 0 significa que no crecerá nada.
+        flex-shrink: ;esto el factor de encogimiento
+        flex-basis: ;esto el tamaño base
+        */
+}
+
+.product__img {
+    max-width: 100%;
+    /*Para que no crezca más del tamaño de su parent*/
+}
+
+.product__content {
+    padding: 1rem;
+    flex: 0 0 40%;/*lo mismo*/
+}
+
+.product__title {
+    font-size: 1.8em;/*tamaño con respecto al contexto*/
+    font-weight: bold;
+    max-width: 250px;/*Lo máximo que puede crecer*/
+}
+
+/*
+    Es un elemento en línea, que a la vez es bloque
+    en otras palabras
+    adquiere las dos características
+    un elemento en línea por defecto no tiene 
+    width ni height <- no le podemos asignar
+    por ello puse inline-b
+*/
+.product__enlac {
+    display: inline-block;
+    position: relative;
+    color: #339ECC;
+    text-decoration: none;
+    border-bottom: solid 2px #339ECC;
+    padding-right: 20px;
+    padding-bottom: .3rem;
+}
+
+.product__enlac::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    background-color: #339ECC;
+    border-radius: 50%;
+}
+/*************************************/
+.oponiones{
+	background: #181F2B;
+	display: flex;
+    padding: 7% 9%;
+    position: relative;
+}
+
+.oponiones::before{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    top: 19.5%;
+    background-image: url("./images/bg-quotes.png");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.oponiones .opn-1{
+    z-index: 1;
+	width: 30%;
+	background: #21293C;
+	padding: 20px;
+	margin: 2%;
+	color: #FFF;
+	border-radius: 5px;
+}
+.oponiones .opn-2{
+	display: flex;
+}
+.oponiones .opn-2 .foto{
+    width: 17%;
+}
+.oponiones .opn-2 img{
+    width: 35px;
+    border-radius: 50%;
+}
+.oponiones .opn-2 span{
+    font-size: 9px;
+}
+.oponiones .opn-2 p{
+    font-size: 8px;
+    margin-top: 0px;
+}
+/*************
